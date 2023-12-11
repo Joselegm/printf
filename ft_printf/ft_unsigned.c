@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_unsigned.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/09 14:04:54 by jose-lui          #+#    #+#             */
-/*   Updated: 2023/12/11 10:36:38 by jose-lui         ###   ########.fr       */
+/*   Created: 2023/12/11 12:33:11 by jose-lui          #+#    #+#             */
+/*   Updated: 2023/12/11 14:01:26 by jose-lui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_libprintf.h"
 
-int	ft_putnbr(int n)
-{
-	unsigned int	i;
 
-	if (n < 0)
+unsigned int	ft_unsigned(unsigned int c)
+{
+	int	sum;
+
+	sum = 0;
+	if (c < 0)
+		return (-1);
+
+	if (c > 9)
 	{
-		write (1, '-', 1);
-		i = -n;
+		ft_unsigned (c / 10);
+		c %= 10;
 	}
 	else
-		i = n;
-	if (i > 9)
 	{
-		ft_putnbr(i / 10);
-		i %= 10;
+		ft_putchar (c + '0');
+		sum++;
 	}
-	ft_putchar(i + '0');
+	return (sum);
 }
-

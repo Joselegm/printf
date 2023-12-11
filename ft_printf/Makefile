@@ -6,7 +6,7 @@
 #    By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/09 13:41:36 by jose-lui          #+#    #+#              #
-#    Updated: 2023/12/09 13:53:56 by jose-lui         ###   ########.fr        #
+#    Updated: 2023/12/11 14:31:12 by jose-lui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ SRCS = ft_printf.c \
 		ft_putstr.c \
 		ft_putchar.c \
 		ft_putnbr.c \
+		ft_unsigned.c \
 
 OBJS =$(SRCS:.c=.o)
 

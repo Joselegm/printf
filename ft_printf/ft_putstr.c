@@ -6,7 +6,7 @@
 /*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 14:35:50 by jose-lui          #+#    #+#             */
-/*   Updated: 2023/12/09 17:29:10 by jose-lui         ###   ########.fr       */
+/*   Updated: 2023/12/11 11:12:26 by jose-lui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,12 @@ int	ft_putstr(char *s)
 	return (i);
 }
 
-int main()
-{
-	char *f = "hola mundo";
-	ft_putstr (f);
-	//write (1, f, 20);
-	write (1, "\n", 1);
-	return (0);
-}
+// int main()
+// {
+// 	char *f = "hola mundo";
+// 	int c = 0;
+// 	ft_putstr (f);
+// 	//write (1, &c, 20);
+// 	write (1, "\n", 1);
+// 	return (0);
+// }
