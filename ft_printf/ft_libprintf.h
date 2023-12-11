@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_libprintf.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joselegm <joselegm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 13:21:45 by jose-lui          #+#    #+#             */
-/*   Updated: 2023/12/11 14:03:08 by jose-lui         ###   ########.fr       */
+/*   Updated: 2023/12/11 21:19:23 by joselegm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ int				ft_putstr(char *s);
 int				ft_putchar(int c);
 unsigned int	ft_unsigned(unsigned int c);
 int				ft_printf(char const *str, ...);
-
+int	            ft_putexapt(char *nex, unsigned long, int s);
 #endif
 
