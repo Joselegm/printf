@@ -3,24 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putexapt.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joselegm <joselegm@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 17:18:13 by jose-lui          #+#    #+#             */
-/*   Updated: 2023/12/11 21:19:52 by joselegm         ###   ########.fr       */
+/*   Updated: 2023/12/13 20:11:13 by jose-lui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_libprintf.h"
 
-int	ft_putexapt(char *nex, unsigned long dec, int s)
+void	ft_putexapt(unsigned long dec, char *nex, int *c)
 {
-    unsigned long   c;
+	if (*c == -1)
+		return ;
+	if (dec >= 16)
+	{
+		ft_putexapt (dec / 16, nex, c);
+		ft_putexapt (dec % 16, nex, c);
+	}
+	else
+		ft_putchar (nex[dec], c);
+}
 
-    c = ft_strlen(nex);
-if (dec >= c)
-{
-    s = ft_putexapt (nex, dec / c, s);
-    s %= c;
-}
-    
-}

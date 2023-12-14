@@ -6,7 +6,7 @@
 /*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 16:53:15 by jose-lui          #+#    #+#             */
-/*   Updated: 2023/12/11 14:06:09 by jose-lui         ###   ########.fr       */
+/*   Updated: 2023/12/14 19:33:35 by jose-lui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,20 +34,21 @@ int	ft_printf(char const *str, ...)
 	return (add);
 }
 
-static int	type_var(char c, va_list type_args)
+static int	type_var(char c, va_list type_args, int *add)
 {
 	if (c == 'c')
-		ft_putchar (va_arg(type_args, int));
-	if (c == 's')
+		ft_putchar (va_arg(type_args, int), add);
+	else if (c == 's')
 		ft_putstr (va_arg(type_args, char *));
-	if (c == 'p')
-
-	if (c == 'd'||c == 'i')
+	else if (c == 'p')
+		ft_putexapt (va_args(type_args, unsigned int));
+	else if (c == 'd'||c == 'i')
 		ft_putnbr (va_arg(type_args, int));
-	if (c == 'u')
+	else if (c == 'u')
 		ft_unsigned (va_arg(type_args, unsigned int));
-	if (c == 'x')
-	if (c == 'X')
-	if (c == '%')
+	else if (c == 'x')
+		ft_putexapt (va_arg(type_args, ))
+	else if (c == 'X')
+	else if (c == '%')
 		ft_putchar ('%');
 }
