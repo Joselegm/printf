@@ -3,18 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 14:04:54 by jose-lui          #+#    #+#             */
-/*   Updated: 2023/12/14 19:35:16 by jose-lui         ###   ########.fr       */
+/*   Updated: 2023/12/18 12:52:31 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_libprintf.h"
 
-int	ft_putnbr(int n)
+void	ft_putnbr(int n, int *c)
 {
-	if (n == -2144748648)
+	if (n == -2147483648)
+	{
+		write (1, "-2147483648", 11)
+			(*c) += 11;
+		
+	}
 	unsigned int	i;
 
 	if (n < 0)
@@ -26,11 +31,10 @@ int	ft_putnbr(int n)
 		i = n;
 	if (i > 9)
 	{
-		ft_putnbr(i / 10);
+		ft_putnbr(i / 10, c);
 		i %= 10;
 	}
-	ft_putchar(i + '0');
-	return (n);
+	ft_putchar(i + '0', c);
 }
 // int main ()
 // {

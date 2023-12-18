@@ -3,33 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_unsigned.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 12:33:11 by jose-lui          #+#    #+#             */
-/*   Updated: 2023/12/11 14:01:26 by jose-lui         ###   ########.fr       */
+/*   Updated: 2023/12/15 12:21:53 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_libprintf.h"
 
-
-unsigned int	ft_unsigned(unsigned int c)
+void	ft_unsigned(unsigned int n, int *c)
 {
-	int	sum;
-
-	sum = 0;
-	if (c < 0)
+	if (n < 0)
 		return (-1);
 
-	if (c > 9)
+	if (n > 9)
 	{
-		ft_unsigned (c / 10);
-		c %= 10;
+		ft_unsigned (n / 10, c);
+		n %= 10;
 	}
 	else
 	{
-		ft_putchar (c + '0');
-		sum++;
+		ft_putchar (n + '0', c);
 	}
-	return (sum);
 }
