@@ -3,22 +3,21 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#    By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/09 13:41:36 by jose-lui          #+#    #+#              #
-#    Updated: 2023/12/15 11:21:05 by marvin           ###   ########.fr        #
+#    Updated: 2023/12/18 18:54:09 by jose-lui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ft_libprintf.a
+NAME = libprintf.a
 
 SRCS = ft_printf.c \
-		ft_strlen.c \
-		ft_putstr.c \
 		ft_putchar.c \
+		ft_putstr.c \
+		ft_putexapt.c \
 		ft_putnbr.c \
 		ft_unsigned.c \
-		ft_putexapt.c \
 
 OBJS =$(SRCS:.c=.o)
 

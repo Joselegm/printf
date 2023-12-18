@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_unsigned.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 12:33:11 by jose-lui          #+#    #+#             */
-/*   Updated: 2023/12/15 12:21:53 by marvin           ###   ########.fr       */
+/*   Updated: 2023/12/18 18:20:46 by jose-lui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_unsigned(unsigned int n, int *c)
 {
 	if (n < 0)
-		return (-1);
+		return ;
 
 	if (n > 9)
 	{
