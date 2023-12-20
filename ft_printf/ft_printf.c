@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 16:53:15 by jose-lui          #+#    #+#             */
-/*   Updated: 2023/12/18 18:46:02 by jose-lui         ###   ########.fr       */
+/*   Updated: 2023/12/19 20:20:13 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,40 +36,42 @@ int	ft_printf(char const *str, ...)
 {
 	va_list	type_args;
 	int		add;
+	int		ct;
 
 	add = 0;
+	ct = 0;
 	va_start (type_args, str);
 	while (str[add] != '\0')
 	{
 		if (str[add] == '%')
 		{
-			type_var (str[add + 1], type_args, &add);
+			type_var (str[add + 1], type_args, &ct);
 			add++;
 		}
 		else
-			ft_putchar (str[add], &add);
+			ft_putchar (str[add], &ct);
 		add++;
 	}
 	va_end (type_args);
-	return (add);
+	return (ct);
 }
  int main ()
 {
-	// char character = 'y';
+	char character = 'y';
 	// char str[] = "Prueba print str";
-	// int nbr = -8;
+	// int nbr = -16;
 	// int dec = -123456789;
-	int ent = 1234556789;
+	// int ent =123456789;
 	// unsigned int prueba_u = -131313;
-	// int prueba_x = -1;
+	// int prueba_x = -17;
 	// int prueba_X = 61;
 	// char prueba_percent = '%';
 	
-	// ft_printf (": %u\n", ft_printf("%c", character));
+	ft_printf (": %u\n", ft_printf("%c", character));
 	// ft_printf (": %u\n", ft_printf("%s", str));
 	// ft_printf (": %u\n", ft_printf("%p", nbr));
 	// ft_printf (": %u\n", ft_printf("%d", dec));
-	ft_printf (": %u\n", ft_printf("%i", ent));
+	// ft_printf (": %u\n", ft_printf("%i", ent));
 	// ft_printf (": %u\n", ft_printf("%u", prueba_u));
 	// ft_printf (": %u\n", ft_printf("%x", prueba_x));
 	// ft_printf (": %u\n", ft_printf("%X", prueba_X));
