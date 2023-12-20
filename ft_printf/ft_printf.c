@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 16:53:15 by jose-lui          #+#    #+#             */
-/*   Updated: 2023/12/19 20:20:13 by marvin           ###   ########.fr       */
+/*   Updated: 2023/12/20 17:53:13 by jose-lui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,10 @@ int	ft_printf(char const *str, ...)
 }
  int main ()
 {
-	char character = 'y';
-	// char str[] = "Prueba print str";
+	int a;
+	
+	// char character = 'y';
+	//char str[] = "Prueba print str";
 	// int nbr = -16;
 	// int dec = -123456789;
 	// int ent =123456789;
@@ -67,15 +69,17 @@ int	ft_printf(char const *str, ...)
 	// int prueba_X = 61;
 	// char prueba_percent = '%';
 	
-	ft_printf (": %u\n", ft_printf("%c", character));
+	// ft_printf (": %u\n", ft_printf("%c", character));
 	// ft_printf (": %u\n", ft_printf("%s", str));
 	// ft_printf (": %u\n", ft_printf("%p", nbr));
 	// ft_printf (": %u\n", ft_printf("%d", dec));
-	// ft_printf (": %u\n", ft_printf("%i", ent));
+	//ft_printf (": %u\n", ft_printf("%i", ent));
 	// ft_printf (": %u\n", ft_printf("%u", prueba_u));
 	// ft_printf (": %u\n", ft_printf("%x", prueba_x));
 	// ft_printf (": %u\n", ft_printf("%X", prueba_X));
 	// ft_printf (": %u\n", ft_printf("%%", prueba_percent));
+	a = ft_printf ("hola");
+	ft_printf("%d\n", a);
 	return (0);
 }
 
