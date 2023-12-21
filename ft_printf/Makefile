@@ -6,11 +6,11 @@
 #    By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/09 13:41:36 by jose-lui          #+#    #+#              #
-#    Updated: 2023/12/20 18:35:17 by jose-lui         ###   ########.fr        #
+#    Updated: 2023/12/20 19:39:39 by jose-lui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libprintf.a
+NAME = libftprintf.a
 
 SRCS = ft_printf.c \
 		ft_putchar.c \

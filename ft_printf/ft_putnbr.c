@@ -6,11 +6,11 @@
 /*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 14:04:54 by jose-lui          #+#    #+#             */
-/*   Updated: 2023/12/20 17:39:15 by jose-lui         ###   ########.fr       */
+/*   Updated: 2023/12/21 16:31:24 by jose-lui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libprintf.h"
+#include "ft_printf.h"
 
 void	ft_putnbr(int n, int *c)
 {
@@ -19,23 +19,16 @@ void	ft_putnbr(int n, int *c)
 		if (write (1, "-2147483648", 11) != -1)
 			(*c) += 11;
 		return ;
-
 	}
-
 	if (n < 0)
 	{
 		ft_putchar ('-', c);
 		n = -n;
-		//ft_putnbr (n * -1, c);
 	}
 	else
 		if (n >= 10)
-		{
-			
 			ft_putnbr (n / 10, c);
-			// n %= 10;
-		}
-		ft_putchar(n % 10 + '0', c);
+	ft_putchar(n % 10 + '0', c);
 }
 // int main ()
 // {

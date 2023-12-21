@@ -6,13 +6,13 @@
 /*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 17:18:13 by jose-lui          #+#    #+#             */
-/*   Updated: 2023/12/13 20:11:13 by jose-lui         ###   ########.fr       */
+/*   Updated: 2023/12/21 18:25:23 by jose-lui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libprintf.h"
+#include "ft_printf.h"
 
-void	ft_putexapt(unsigned long dec, char *nex, int *c)
+void	ft_putexapt(unsigned long long dec, char *nex, int *c)
 {
 	if (*c == -1)
 		return ;
@@ -24,4 +24,3 @@ void	ft_putexapt(unsigned long dec, char *nex, int *c)
 	else
 		ft_putchar (nex[dec], c);
 }
-

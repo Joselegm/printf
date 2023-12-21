@@ -6,11 +6,11 @@
 /*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 16:53:15 by jose-lui          #+#    #+#             */
-/*   Updated: 2023/12/20 17:53:13 by jose-lui         ###   ########.fr       */
+/*   Updated: 2023/12/21 18:28:31 by jose-lui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libprintf.h"
+#include "ft_printf.h"
 
 void	type_var(char c, va_list type_args, int *add)
 {
@@ -19,7 +19,7 @@ void	type_var(char c, va_list type_args, int *add)
 	else if (c == 's')
 		ft_putstr (va_arg(type_args, char *), add);
 	else if (c == 'p')
-		ft_putexapt (va_arg(type_args, unsigned int), "0123456789abcdef", add);
+		ft_putexapt (va_arg(type_args, unsigned long long), "0123456789abcdef", add);
 	else if (c == 'd' || c == 'i')
 		ft_putnbr (va_arg(type_args, int), add);
 	else if (c == 'u')
@@ -55,12 +55,13 @@ int	ft_printf(char const *str, ...)
 	va_end (type_args);
 	return (ct);
 }
- int main ()
-{
-	int a;
-	
+
+// int main ()
+//{
+	// int	a;
+
 	// char character = 'y';
-	//char str[] = "Prueba print str";
+	// char str[] = "Prueba print str";
 	// int nbr = -16;
 	// int dec = -123456789;
 	// int ent =123456789;
@@ -68,7 +69,7 @@ int	ft_printf(char const *str, ...)
 	// int prueba_x = -17;
 	// int prueba_X = 61;
 	// char prueba_percent = '%';
-	
+
 	// ft_printf (": %u\n", ft_printf("%c", character));
 	// ft_printf (": %u\n", ft_printf("%s", str));
 	// ft_printf (": %u\n", ft_printf("%p", nbr));
@@ -78,8 +79,8 @@ int	ft_printf(char const *str, ...)
 	// ft_printf (": %u\n", ft_printf("%x", prueba_x));
 	// ft_printf (": %u\n", ft_printf("%X", prueba_X));
 	// ft_printf (": %u\n", ft_printf("%%", prueba_percent));
-	a = ft_printf ("hola");
-	ft_printf("%d\n", a);
-	return (0);
-}
-
+	// 	a = ft_printf ("hola");
+	// 	ft_printf("%d\n", a);
+	// ft_printf (" NULL %s NULL ", NULL);
+	// 	return (0);
+//}

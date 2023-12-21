@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 14:35:50 by jose-lui          #+#    #+#             */
-/*   Updated: 2023/12/18 11:18:54 by marvin           ###   ########.fr       */
+/*   Updated: 2023/12/21 18:14:11 by jose-lui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_libprintf.h"
+#include "ft_printf.h"
 
 void	ft_putstr(char *s, int *c)
 {
@@ -18,12 +18,17 @@ void	ft_putstr(char *s, int *c)
 
 	i = 0;
 	if (!s)
+	{
+		write (1, "(null)", 6);
+		*c = 6;
 		return ;
+	}
 	while (s[i] != '\0')
 	{
-		write(1, &s[i], 1);
+		ft_putchar (s[i], c);
+		if (*c == -1)
+			return ;
 		i++;
-		*c = i;
 	}
 }
 
