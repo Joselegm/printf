@@ -6,7 +6,7 @@
 /*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 16:53:15 by jose-lui          #+#    #+#             */
-/*   Updated: 2023/12/21 18:28:31 by jose-lui         ###   ########.fr       */
+/*   Updated: 2024/01/02 17:49:47 by jose-lui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@ void	type_var(char c, va_list type_args, int *add)
 	else if (c == 's')
 		ft_putstr (va_arg(type_args, char *), add);
 	else if (c == 'p')
-		ft_putexapt (va_arg(type_args, unsigned long long), "0123456789abcdef", add);
+	{
+		ft_putstr ("0x", add);
+		if (*add != -1)
+			ft_putexapt (va_arg(type_args, unsigned long long), "0123456789abcdef", add);
+	}
 	else if (c == 'd' || c == 'i')
 		ft_putnbr (va_arg(type_args, int), add);
 	else if (c == 'u')

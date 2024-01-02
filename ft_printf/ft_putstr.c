@@ -6,7 +6,7 @@
 /*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 14:35:50 by jose-lui          #+#    #+#             */
-/*   Updated: 2023/12/21 18:14:11 by jose-lui         ###   ########.fr       */
+/*   Updated: 2024/01/02 17:45:01 by jose-lui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ void	ft_putstr(char *s, int *c)
 	i = 0;
 	if (!s)
 	{
-		write (1, "(null)", 6);
-		*c = 6;
+		ft_putstr ("(null)", c);
+		// write (1, "(null)", 6);
+		// *c = 6;
 		return ;
 	}
 	while (s[i] != '\0')

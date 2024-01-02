@@ -6,7 +6,7 @@
 /*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 14:04:54 by jose-lui          #+#    #+#             */
-/*   Updated: 2023/12/21 16:31:24 by jose-lui         ###   ########.fr       */
+/*   Updated: 2024/01/02 17:30:06 by jose-lui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,15 @@ void	ft_putnbr(int n, int *c)
 	if (n < 0)
 	{
 		ft_putchar ('-', c);
-		n = -n;
+		ft_putnbr (n * -1, c);
 	}
 	else
-		if (n >= 10)
+	{
+		if (n > 9)
 			ft_putnbr (n / 10, c);
-	ft_putchar(n % 10 + '0', c);
+		if (*c != -1)
+			ft_putchar(n % 10 + '0', c);
+	}
 }
 // int main ()
 // {
