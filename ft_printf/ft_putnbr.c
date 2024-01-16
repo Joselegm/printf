@@ -6,7 +6,7 @@
 /*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 14:04:54 by jose-lui          #+#    #+#             */
-/*   Updated: 2024/01/02 17:30:06 by jose-lui         ###   ########.fr       */
+/*   Updated: 2024/01/16 17:59:40 by jose-lui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,3 @@ void	ft_putnbr(int n, int *c)
 			ft_putchar(n % 10 + '0', c);
 	}
 }
-// int main ()
-// {
-// 	int t = 3;
-// 	printf ("%i\n", t);
-// 	return (0);
-// }
