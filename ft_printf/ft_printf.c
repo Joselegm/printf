@@ -6,7 +6,7 @@
 /*   By: jose-lui <jose-lui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 16:53:15 by jose-lui          #+#    #+#             */
-/*   Updated: 2024/01/16 17:57:56 by jose-lui         ###   ########.fr       */
+/*   Updated: 2024/01/18 16:45:16 by jose-lui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int	main(void)
 	// unsigned int prueba_u = -131313;
 	// int prueba_x = -17;
 	// int prueba_X = 61;
-	// char prueba_percent = '%';
+	// char prueba_percent = '%%c';
 
 	// ft_printf (": %u\n", ft_printf("%c", character));
 	// ft_printf (": %u\n", ft_printf("%s", str));
@@ -83,7 +83,7 @@ int	main(void)
 	// ft_printf (": %u\n", ft_printf("%u", prueba_u));
 	// ft_printf (": %u\n", ft_printf("%x", prueba_x));
 	// ft_printf (": %u\n", ft_printf("%X", prueba_X));
-	// ft_printf (": %u\n", ft_printf("%%", prueba_percent));
+	// ft_printf (": %u\n", ft_printf("%%c", 'f'));
 	// a = ft_printf ("hola");
 	// ft_printf("%d\n", a);
 	// ft_printf (" NULL %s NULL ", NULL);
